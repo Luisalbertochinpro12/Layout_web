@@ -9,7 +9,6 @@
       <option value="otros">Otros</option>
     </select>
 
-    <!-- Inputs para dimensiones personalizadas -->
     <div v-if="isCustom" class="mt-3">
       <div class="mb-3">
         <label for="length" class="form-label">Longitud (cm)</label>
@@ -51,8 +50,8 @@
 <script>
 export default {
   props: {
-    modelValue: String, // Vinculación bidireccional del dropdown
-    customDimensions: Object, // Dimensiones personalizadas
+    modelValue: String,
+    customDimensions: Object,
   },
   emits: ['update:modelValue', 'update-custom-dimensions'],
   data() {

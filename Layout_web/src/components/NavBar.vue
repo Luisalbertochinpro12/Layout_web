@@ -18,9 +18,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Elementos de la barra de navegación -->
     <div class="collapse navbar-collapse" id="navbarNav">
-      <!-- Barra de búsqueda -->
       <div class="input-group">
         <input
           type="text"
@@ -54,13 +52,13 @@
 .search-input {
   height: 30px;
   font-size: 14px;
-  width: 200px; /* Ajusta el ancho según lo que necesites */
+  width: 200px;
 }
 
 .input-group .btn {
   height: 30px;
   font-size: 14px;
   padding: 0 10px;
-  border-radius: 0; /* Opcional, para evitar bordes redondeados */
+  border-radius: 0;
 }
 </style>
