@@ -37,7 +37,13 @@
         />
       </div>
 
-      <button type="submit" class="btn btn-primary w-100">Cotizar</button>
+      <div class="d-flex justify-content-between mt-4">
+        <!-- Botón para regresar -->
+        <button type="button" class="btn btn-secondary" @click="goBack">Regresar</button>
+
+        <!-- Botón para cotizar -->
+        <button type="submit" class="btn btn-primary">Cotizar</button>
+      </div>
     </form>
   </div>
 </template>
@@ -77,6 +83,10 @@ export default {
         name: 'QuoteOptions',
         query: formData,
       })
+    },
+    goBack() {
+      // Regresa a MainBody
+      this.$router.push('/')
     },
   },
 }

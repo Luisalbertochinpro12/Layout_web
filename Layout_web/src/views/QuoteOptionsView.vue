@@ -8,8 +8,12 @@
         :service="option.service"
         :price="option.price"
         :deliveryTime="option.deliveryTime"
-        @select="selectOption"
+        @select="selectOption(option)"
       />
+    </div>
+
+    <div class="mt-4 text-center">
+      <button class="btn btn-secondary" @click="goBack">Regresar</button>
     </div>
   </div>
 </template>
@@ -33,6 +37,20 @@ export default {
     selectOption(option) {
       this.$router.push({ name: 'QuoteDetails', query: { service: option.service } })
     },
+    goBack() {
+      this.$router.go(-1)
+    },
   },
 }
 </script>
+
+<style scoped>
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+button {
+  margin-top: 1.5rem;
+}
+</style>
